@@ -4,3 +4,7 @@
 - java 11 
 - springboot 2.4.2
 - jHipster 
+
+<h2> 프로젝트 정보</h2>
+
+- MSA 기반 서비스 중 Book 서비스 담당 
