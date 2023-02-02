@@ -36,6 +36,7 @@
     "languages": ["ko"],
     "blueprints": [],
     "skipClient": true,
-    "skipUserManagement": true
+    "skipUserManagement": true,
+    "lastLiquibaseTimestamp": 1675343123000
   }
 }
