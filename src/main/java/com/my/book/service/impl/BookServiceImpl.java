@@ -36,15 +36,13 @@ public class BookServiceImpl implements BookService {
     /**
      * Save a book.
      *
-     * @param bookDTO the entity to save.
+     * @param book the entity to save.
      * @return the persisted entity.
      */
     @Override
-    public BookDTO save(BookDTO bookDTO) {
-        log.debug("Request to save Book : {}", bookDTO);
-        Book book = bookMapper.toEntity(bookDTO);
-        book = bookRepository.save(book);
-        return bookMapper.toDto(book);
+    public Book save(Book book) {
+        log.debug("Request to save Book : {}", book);
+        return bookRepository.save(book);
     }
 
     /**

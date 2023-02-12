@@ -1,5 +1,6 @@
 package com.my.book.service;
 
+import com.my.book.domain.Book;
 import com.my.book.web.rest.dto.BookDTO;
 
 import org.springframework.data.domain.Page;
@@ -15,10 +16,10 @@ public interface BookService {
     /**
      * Save a book.
      *
-     * @param bookDTO the entity to save.
+     * @param book the entity to save.
      * @return the persisted entity.
      */
-    BookDTO save(BookDTO bookDTO);
+    Book save(Book book);
 
     /**
      * Get all the books.

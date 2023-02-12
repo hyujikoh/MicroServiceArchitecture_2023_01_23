@@ -6,6 +6,7 @@ import com.my.book.web.rest.dto.BookDTO;
 import com.my.book.web.rest.dto.BookCriteria;
 import com.my.book.service.BookQueryService;
 
+import com.my.book.web.rest.mapper.BookMapper;
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.PaginationUtil;
 import io.github.jhipster.web.util.ResponseUtil;
@@ -43,9 +44,12 @@ public class BookResource {
 
     private final BookQueryService bookQueryService;
 
-    public BookResource(BookService bookService, BookQueryService bookQueryService) {
+    private final BookMapper bookMapper;
+
+    public BookResource(BookService bookService, BookQueryService bookQueryService, BookMapper bookMapper) {
         this.bookService = bookService;
         this.bookQueryService = bookQueryService;
+        this.bookMapper = bookMapper;
     }
 
     /**
@@ -61,7 +65,7 @@ public class BookResource {
         if (bookDTO.getId() != null) {
             throw new BadRequestAlertException("A new book cannot already have an ID", ENTITY_NAME, "idexists");
         }
-        BookDTO result = bookService.save(bookDTO);
+        BookDTO result = bookMapper.toDto(bookService.save(bookMapper.toEntity(bookDTO)));
         return ResponseEntity.created(new URI("/api/books/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
             .body(result);
@@ -82,7 +86,7 @@ public class BookResource {
         if (bookDTO.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        BookDTO result = bookService.save(bookDTO);
+        BookDTO result = bookMapper.toDto(bookService.save(bookMapper.toEntity(bookDTO)));
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, bookDTO.getId().toString()))
             .body(result);
