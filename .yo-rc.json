@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.my.book",
+      "nativeLanguage": "ko"
+    },
+    "jhipsterVersion": "6.9.1",
+    "applicationType": "microservice",
+    "baseName": "book",
+    "packageName": "com.my.book",
+    "packageFolder": "com/my/book",
+    "serverPort": "8041",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mariadb",
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "Zjc3MTNkYjI4NmIyY2FkYWMyYjBkMjhiMGFlYWUyYzlhZGIyN2ZkZjZjZTJlMTFjMmZkNmIxZWZiZjA2ODQ4YmM0Y2YxYjU3YmRhOGZiZGI0ZGY2ZTU0ZmFlNjBhNmRmNGRlYThlMjljNzFhMzVmNzFiMWZkYmQ5NTdhMmZiNTU=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1676193166326,
+    "testFrameworks": ["cucumber"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "ko",
+    "languages": ["ko", "en"],
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
