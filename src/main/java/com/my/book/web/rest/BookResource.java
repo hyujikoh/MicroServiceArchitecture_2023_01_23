@@ -2,8 +2,8 @@ package com.my.book.web.rest;
 
 import com.my.book.service.BookService;
 import com.my.book.web.rest.errors.BadRequestAlertException;
-import com.my.book.service.dto.BookDTO;
-import com.my.book.service.dto.BookCriteria;
+import com.my.book.web.rest.dto.BookDTO;
+import com.my.book.web.rest.dto.BookCriteria;
 import com.my.book.service.BookQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
@@ -15,7 +15,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

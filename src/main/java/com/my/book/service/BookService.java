@@ -1,6 +1,6 @@
 package com.my.book.service;
 
-import com.my.book.service.dto.BookDTO;
+import com.my.book.web.rest.dto.BookDTO;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,4 +1,4 @@
-package com.my.book.service.mapper;
+package com.my.book.web.rest.mapper;
 
 import java.util.List;
 

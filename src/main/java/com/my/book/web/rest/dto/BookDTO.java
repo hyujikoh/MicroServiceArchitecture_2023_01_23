@@ -1,4 +1,4 @@
-package com.my.book.service.dto;
+package com.my.book.web.rest.dto;
 
 import javax.validation.constraints.*;
 import java.io.Serializable;
@@ -7,7 +7,7 @@ import java.io.Serializable;
  * A DTO for the {@link com.my.book.domain.Book} entity.
  */
 public class BookDTO implements Serializable {
-    
+
     private Long id;
 
     @NotNull
@@ -18,7 +18,7 @@ public class BookDTO implements Serializable {
 
     private String description;
 
-    
+
     public Long getId() {
         return id;
     }

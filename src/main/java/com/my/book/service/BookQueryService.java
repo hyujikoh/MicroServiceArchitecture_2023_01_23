@@ -2,8 +2,6 @@ package com.my.book.service;
 
 import java.util.List;
 
-import javax.persistence.criteria.JoinType;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -17,9 +15,9 @@ import io.github.jhipster.service.QueryService;
 import com.my.book.domain.Book;
 import com.my.book.domain.*; // for static metamodels
 import com.my.book.repository.BookRepository;
-import com.my.book.service.dto.BookCriteria;
-import com.my.book.service.dto.BookDTO;
-import com.my.book.service.mapper.BookMapper;
+import com.my.book.web.rest.dto.BookCriteria;
+import com.my.book.web.rest.dto.BookDTO;
+import com.my.book.web.rest.mapper.BookMapper;
 
 /**
  * Service for executing complex queries for {@link Book} entities in the database.

@@ -3,8 +3,8 @@ package com.my.book.service.impl;
 import com.my.book.service.BookService;
 import com.my.book.domain.Book;
 import com.my.book.repository.BookRepository;
-import com.my.book.service.dto.BookDTO;
-import com.my.book.service.mapper.BookMapper;
+import com.my.book.web.rest.dto.BookDTO;
+import com.my.book.web.rest.mapper.BookMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

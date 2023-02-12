@@ -1,8 +1,8 @@
-package com.my.book.service.mapper;
+package com.my.book.web.rest.mapper;
 
 
 import com.my.book.domain.*;
-import com.my.book.service.dto.BookDTO;
+import com.my.book.web.rest.dto.BookDTO;
 
 import org.mapstruct.*;
 

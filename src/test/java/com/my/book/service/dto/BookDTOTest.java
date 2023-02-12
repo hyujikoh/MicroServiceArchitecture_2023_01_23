@@ -1,5 +1,6 @@
 package com.my.book.service.dto;
 
+import com.my.book.web.rest.dto.BookDTO;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import com.my.book.web.rest.TestUtil;

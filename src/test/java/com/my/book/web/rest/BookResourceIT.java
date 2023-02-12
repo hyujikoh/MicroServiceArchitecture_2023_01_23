@@ -4,9 +4,8 @@ import com.my.book.BookApp;
 import com.my.book.domain.Book;
 import com.my.book.repository.BookRepository;
 import com.my.book.service.BookService;
-import com.my.book.service.dto.BookDTO;
-import com.my.book.service.mapper.BookMapper;
-import com.my.book.service.dto.BookCriteria;
+import com.my.book.web.rest.dto.BookDTO;
+import com.my.book.web.rest.mapper.BookMapper;
 import com.my.book.service.BookQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -191,7 +190,7 @@ public class BookResourceIT {
             .andExpect(jsonPath("$.[*].author").value(hasItem(DEFAULT_AUTHOR)))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)));
     }
-    
+
     @Test
     @Transactional
     public void getBook() throws Exception {
