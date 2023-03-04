@@ -108,4 +108,8 @@ public class Book implements Serializable {
             ", description='" + getDescription() + "'" +
             "}";
     }
+
+    public void setBookStatus(BookStatus bookStatus) {
+        this.bookStatus = bookStatus;
+    }
 }

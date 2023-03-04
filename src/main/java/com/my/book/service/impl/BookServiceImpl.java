@@ -90,4 +90,11 @@ public class BookServiceImpl implements BookService {
     public Book findBookInfo(Long bookId) {
         return bookRepository.findById(bookId).get();
     }
+
+    @Override
+    public void processChangeBookState(Long bookId, String bookStatus) {
+        Book book = bookRepository.findById(bookId).get();
+        book.setBookStatus(bookStatus.valueOf(bookStatus));
+        bookRepository.save(book);
+    }
 }

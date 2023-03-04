@@ -46,4 +46,6 @@ public interface BookService {
     void delete(Long id);
 
     Book findBookInfo(Long bookId);
+
+    void processChangeBookState(Long bookId, String bookStatus);
 }
