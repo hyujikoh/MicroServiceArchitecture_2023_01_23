@@ -1,6 +1,8 @@
 package com.my.book.web.rest;
 
+import com.my.book.domain.Book;
 import com.my.book.service.BookService;
+import com.my.book.web.rest.dto.BookInfoDTO;
 import com.my.book.web.rest.errors.BadRequestAlertException;
 import com.my.book.web.rest.dto.BookDTO;
 import com.my.book.web.rest.dto.BookCriteria;
@@ -143,5 +145,12 @@ public class BookResource {
         log.debug("REST request to delete Book : {}", id);
         bookService.delete(id);
         return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();
+    }
+
+    @GetMapping("/books/bookInfo/{bookId}")
+    public ResponseEntity<BookInfoDTO> findBookInfo (@PathVariable("bookId") Long bookId){
+        Book book = bookService.findBookInfo(bookId);
+        BookInfoDTO bookInfoDTO = new BookInfoDTO(bookId,book.getTitle());
+        return ResponseEntity.ok().body(bookInfoDTO);
     }
 }

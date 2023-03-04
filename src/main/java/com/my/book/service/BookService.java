@@ -44,4 +44,6 @@ public interface BookService {
      * @param id the id of the entity.
      */
     void delete(Long id);
+
+    Book findBookInfo(Long bookId);
 }
